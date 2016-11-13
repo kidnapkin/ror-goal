@@ -5,10 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use bootstrap as the default css framework
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'rails_layout', '~> 1.0', '>= 1.0.34'
 # Use devise for authorisation
 gem 'devise', '~> 4.2'
-# Bootstrap views for devise
-gem 'devise-bootstrap-views', '~> 0.0.9'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

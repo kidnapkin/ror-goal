@@ -8,6 +8,9 @@
   </div>
 </div>
 <div class="row tasks-row">
+  <div class="col-md-12 sort-btn-wrapper">
+    <%= link_to 'Sort tasks by title', root_path(sort: 'title'), class: 'btn btn-small btn-success' %>
+  </div>
   <div class="col-md-6">
     <div class="panel panel-success">
       <div class="panel-heading">Completed tasks</div>

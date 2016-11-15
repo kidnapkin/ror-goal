@@ -1,13 +1,20 @@
 <ul class="list-group tasklist">
     <% task_list.each do |task| %>
       
-      <li class="list-group-item tasklist-item">
+      <li class="list-group-item tasklist-item" id="task_<%= task.id %>">
           <%= check_box_tag "task_ids[]", task.id %>
           <%= link_to task.title, task %>
-          <span class="badge"><%= task.due_date %></span>
-          <span class="badge"><%= task.completed %></span>
+          
+          <% if !task.completed %>
+            <span class="badge">Priority: <%= task.priority %></span>
+            <span class="badge">Due date: <%= task.due_date %></span>
+            <span class="label label-warning">In progress</span>
+          <% else %>
+            <span class="label label-success">Completed</span>
+          <% end %>
+
           <div class="tasklist-item__mod-buttons">
-            <%= link_to task, method: :delete,
+            <%= link_to task, method: :delete, remote: true,
                               data: { confirm: "You sure?" }, class: 'btn btn-small btn-danger' do %>
                                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                               <% end %>

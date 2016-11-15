@@ -1,4 +1,4 @@
-<h1>Tasks#edit</h1>
+<h1>Edit task</h1>
 <%= form_for(@task) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
@@ -26,7 +26,23 @@
     <%= f.label :due_date %>          
     <%= f.date_field :due_date, class: 'form-control' %>
   </div>
+  
+  <% if !@task.completed %>
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :completed %> Complete the task
+    </label>
+  </div>
+  <% else %>
+    <div class="completed-label">
+      <span class="label label-success">The task is completed!</span>
+    </div>
+  <% end %>
 
   <%= f.submit 'Update task', :class => 'btn btn-primary' %>
 <% end %>
 
+<%= link_to @task, method: :delete,
+                  data: { confirm: "You sure?" }, class: 'btn btn-small btn-danger' do %>
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                  <% end %>

@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [:destroy, :edit, :update]
+  before_action :set_task, only: [:destroy, :edit, :update, :show]
   
   def index
   end
@@ -33,8 +33,10 @@ class TasksController < ApplicationController
   
   def destroy
     @task.destroy
-    flash[:notice] = "Task deleted"
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to root_url, notice: "Task deleted" }
+      format.js
+    end 
   end
   
   private

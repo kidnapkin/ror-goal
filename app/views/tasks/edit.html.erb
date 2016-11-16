@@ -39,10 +39,10 @@
     </div>
   <% end %>
 
-  <%= f.submit 'Update task', :class => 'btn btn-primary' %>
-<% end %>
-
-<%= link_to @task, method: :delete,
+  <%= f.submit 'Update task', class: 'btn btn-primary' %>
+  
+  <%= link_to @task, method: :delete,
                   data: { confirm: "You sure?" }, class: 'btn btn-small btn-danger' do %>
                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                   <% end %>
+<% end %>

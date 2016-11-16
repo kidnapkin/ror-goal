@@ -1,4 +1,4 @@
-<h1>Goal</h1>
+<h1>Goal! simple task manager</h1>
 
 <div class="row">
   <div class="col-md-12">
@@ -12,16 +12,10 @@
     <%= link_to 'Sort tasks by title', root_path(sort: 'title'), class: 'btn btn-small btn-success' %>
   </div>
   <div class="col-md-6">
-    <div class="panel panel-success">
-      <div class="panel-heading">Completed tasks</div>
-      <%= render 'tasks/tasks', task_list: @tasks_completed %>
-    </div>
+      <%= render 'tasks/tasks', task_list: @tasks_completed, title: 'Completed tasks', heading_class: 'success' %>
   </div>
   <div class="col-md-6">
-    <div class="panel panel-warning">
-      <div class="panel-heading">Unompleted tasks</div>
-      <%= render 'tasks/tasks', task_list: @tasks_uncompleted %>
-    </div>
+      <%= render 'tasks/tasks', task_list: @tasks_uncompleted, title: 'Uncompleted tasks', heading_class: 'warning' %>
   </div>
 </div>
 

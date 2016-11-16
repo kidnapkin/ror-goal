@@ -1,3 +1,13 @@
 $('#task_<%= @task.id %>').fadeOut(500, function() {
+    var listBtn = $(this).parents('.panel').next().find('.bulk-remove-btn');
+    var remainItems = $(this).parents('.panel').find('.tasklist-item').length;
+    
     $(this).remove();
+    
+    remainItems--;
+
+    if (remainItems == 0) {
+        listBtn.remove();
+    }
+
 })

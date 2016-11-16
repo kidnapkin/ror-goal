@@ -4,8 +4,12 @@ class Task < ApplicationRecord
   validates :description, presence: true
   validates :due_date, presence: true
   validates :priority, presence: true
+  validate :due_date_cannot_be_in_the_past
   
-  validates_each :due_date do |record, attr, value|
-    record.errors.add(attr, 'Due dater must be in the future') if value <= Time.now.to_date
+  def due_date_cannot_be_in_the_past
+    if due_date.present? && due_date < Date.today
+      errors.add(:due_date, "can't be in the past")
+    end
   end
+  
 end

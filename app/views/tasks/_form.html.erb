@@ -1,4 +1,5 @@
-<%= form_for(@task) do |f| %>
+<%= form_for(object) do |f| %>
+<%= render 'shared/error_messages', object: object %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -7,17 +8,6 @@
         <h4 class="modal-title" id="myModalLabel">New task</h4>
       </div>
       <div class="modal-body">
-          <% if @task.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@task.errors.count, "error") %> prohibited this @tasks from being saved:</h2>
-              
-              <ul>
-              <% @task.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
           
           <div class="form-group">
               <%= f.label :title %>

@@ -15,8 +15,8 @@ class TasksController < ApplicationController
       redirect_to root_url
       flash[:notice] = 'Task was successfully updated.'
     else
-      redirect_to root_url
       flash[:danger] = "Failed to update!"
+      render 'tasks/edit'
     end
   end
   
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
       flash[:notice] = "Task created!"
     else
       redirect_to root_url
-      flash[:danger] = "Failed to create!"
+      flash[:danger] = "Failed to create! #{ @task.errors.full_messages.join(', ').to_s }" 
     end
   end
   

@@ -8,8 +8,6 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'rails_layout', '~> 1.0', '>= 1.0.34'
 # Use devise for authorisation
 gem 'devise', '~> 4.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -39,6 +37,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.4'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '0.18.4'
 end
 
 group :development do

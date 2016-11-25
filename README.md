@@ -41,13 +41,13 @@ Acceptance Criteria:
       -- due date should be a future date +
       -- nice to have if there are client side validation as well
    4.1 use datepicker for date input +
-5 User should be able to make a batch delete on the Home page
-  - checkboxes next to each task, user checks some tasks and clicks button 'batch delete' which
- deletes selected tasks
+5 User should be able to make a batch delete on the Home page +
+  - checkboxes next to each task, user checks some tasks and clicks button 'batch delete' which +
+ deletes selected tasks +
   - there should be two links/buttons: 'check all' and 'uncheck all'
 6 User should be able to sort the list on the Home page by title
 7 User twitter bootstrap for nice UI +
 8 Few tests with Rspec (e.g. add a method `full name` to user model and add tests for it, add tests for validation rules)
 9 Try to use Ajax wherever it is possible (e.g. delete task on the home page), minimum page reloads
 10 use github to host the code, use heroku to deploy the app +
-11 Decide yourself what will be better to use gems or not. It's up to you.
+11 Decide yourself what will be better to use gems or not. It's up to you. +

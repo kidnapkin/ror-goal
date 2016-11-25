@@ -1,6 +1,9 @@
 <%= form_tag tasks_path, method: :delete do -%>
 <div class="panel panel-<%= heading_class %>">
-  <div class="panel-heading"><%= title %></div>
+  <div class="panel-heading">
+    <%= check_box_tag "check_all_#{ heading_class }", nil, false, class: 'check_all' %>
+    <%= title %>
+  </div>
   <ul class="list-group tasklist">
       <% task_list.each do |task| %>
         

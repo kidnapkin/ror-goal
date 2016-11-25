@@ -41,10 +41,7 @@ class TasksController < ApplicationController
   
   def bulk_destroy
     @tasks = Task.where(id: params[:task_ids])
-    if @tasks.length > 0
-      @tasks.each do |task|
-        task.destroy
-      end
+    if @tasks.exists? && @tasks.delete_all
       redirect_to root_url
       flash[:notice] = "Tasks deleted"
     else

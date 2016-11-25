@@ -6,6 +6,8 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use bootstrap as the default css framework
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'rails_layout', '~> 1.0', '>= 1.0.34'
+# Generate fake data
+gem 'faker', '~> 1.6', '>= 1.6.6'
 # Use devise for authorisation
 gem 'devise', '~> 4.2'
 # Use Puma as the app server

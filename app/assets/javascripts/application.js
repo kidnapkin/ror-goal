@@ -17,7 +17,7 @@
 //= require_tree .
 
 
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
    $('.check_all').on("click", function(){ 
         var cbxs = $(this).parent().next('.tasklist').find('input[type="checkbox"]');
         cbxs.prop("checked", !cbxs.prop("checked"));

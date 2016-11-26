@@ -27,7 +27,7 @@
     <%= f.date_field :due_date, class: 'form-control' %>
   </div>
   
-  <% if !@task.completed %>
+  <% if !@task.completed # use unless %>
   <div class="checkbox">
     <label>
       <%= f.check_box :completed %> Complete the task

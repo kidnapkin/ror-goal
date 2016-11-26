@@ -7,11 +7,11 @@
   <ul class="list-group tasklist">
       <% task_list.each do |task| %>
         
-        <li class="list-group-item tasklist-item" id="task_<%= task.id %>">
+        <li class="list-group-item tasklist-item" id="task_<%= task.id # use dom_id method %>">
             <%= check_box_tag "task_ids[]", task.id %>
             <%= link_to task.title, task %>
             
-            <% if !task.completed %>
+            <% if !task.completed # use unless %>
               <span class="badge">Priority: <%= task.priority %></span>
               <span class="badge">Due date: <%= task.due_date %></span>
               <span class="label label-warning">In progress</span>

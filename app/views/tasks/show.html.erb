@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<% if !@task.completed %>
+<% if !@task.completed # use unless %>
     <span class="label label-warning">In progress</span>
 <% else %>
     <span class="label label-success">Completed</span>

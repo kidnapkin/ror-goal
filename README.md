@@ -19,7 +19,7 @@ Acceptance Criteria:
   - edit existing task +
   - delete existing task +
   - mark task as completed +
-  - make it active again if task is completed (NOT CLEAR)
+  - make it active again if task is completed +
   2.1 User can manage only his own tasks +
   2.2 Task has next attributes:
        - title +
@@ -35,11 +35,11 @@ Acceptance Criteria:
    - by clicking "edit" link on the Home page user is taken to this page +
    - this page displays a form with task's data +
    - user should be able to edit any attribute +
-   - validation rules should be applied
+   - validation rules should be applied +
       -- title can't be blank +
       -- priority should be a number +
       -- due date should be a future date +
-      -- nice to have if there are client side validation as well
+      -- nice to have if there are client side validation as well +
    4.1 use datepicker for date input +
 5 User should be able to make a batch delete on the Home page +
   - checkboxes next to each task, user checks some tasks and clicks button 'batch delete' which +

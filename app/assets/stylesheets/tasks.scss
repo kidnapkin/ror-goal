@@ -4,10 +4,11 @@
 
 .tasklist-item {
     &__mod-buttons {
-        display: none;
+        display: inline-block;
+        visibility: hidden;
     }
     &:hover &__mod-buttons {
-        display: inline-block;
+        visibility: visible;
     }
 }
 

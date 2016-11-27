@@ -12,7 +12,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to root_url
+      redirect_to task_path
       flash[:notice] = 'Task was successfully updated.'
     else
       flash[:danger] = 'Failed to update!'

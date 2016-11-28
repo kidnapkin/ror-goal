@@ -13,22 +13,22 @@
   <% end %>
   
   <div class="form-group">
-      <%= f.label :title %>
+      <%= f.label :title, 'Task tittle*' %>
       <%= f.text_field :title, required: true, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, 'Task description*' %>
     <%= f.text_area :description, required: true, class: 'form-control' %>
   </div>
   
   <div class="form-group">
-    <%= f.label :priority %>  
+    <%= f.label :priority, 'Task priority*' %>  
     <%= f.number_field :priority, required: true, in: 1..10, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= f.label :due_date %>          
+    <%= f.label :due_date, 'Due date*' %>          
     <%= f.date_field :due_date, min: Time.zone.today, required: true, class: 'form-control' %>
   </div>
   

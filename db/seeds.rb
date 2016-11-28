@@ -20,7 +20,7 @@ users = User.order(:created_at).take(6)
 10.times do
   title = Faker::Book.title
   description = Faker::Lorem.sentence(5)
-  prioriry = Faker::Number.between(0, 10)
+  prioriry = Faker::Number.between(1, 10)
   due_date = Faker::Date.forward(25)
   users.each do |user|
     user.tasks.create!(title: title,
